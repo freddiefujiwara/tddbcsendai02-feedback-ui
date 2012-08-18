@@ -8,8 +8,8 @@ set :deploy_to ,"/usr/share/nginx/www/tddbcsendai02.ze.gs/"
 set :user, "fumikazu"
 namespace :deploy do
   task :setup do
-      run "source ~/.nvm/nvm.sh;nvm use v0.8.6;cd #{current_path}; make"
-      run "source ~/.nvm/nvm.sh;nvm use v0.8.6;cd #{current_path}/lib; make coverage_html"
+      run "source ~/.nvm/nvm.sh;nvm use v0.8.7;cd #{current_path}; make"
+      run "source ~/.nvm/nvm.sh;nvm use v0.8.7;cd #{current_path}/lib; make coverage_html"
   end
 end
 after "deploy", "deploy:setup"
